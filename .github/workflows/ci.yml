@@ -213,4 +213,6 @@ jobs:
 
       - name: Stop sccache
         if: always()
-        run: sccache --stop-server
+        run: |
+          which sccache
+          . sccache --stop-server
